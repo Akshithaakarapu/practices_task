@@ -16,6 +16,7 @@ class Loginpage extends StatefulWidget {
 class _LoginpageState extends State<Loginpage> {
 
 Studentlist? list;
+ List<Datum>? listdata;
 bool _loading=false;
 
 void data() async{
@@ -72,8 +73,9 @@ void data() async{
               itemBuilder: (BuildContext context, int index) {
                 return Column(
                   children: [
-                    Text(" list count:${list?.data}"),
+                   // Text(" list count:${list?.data}"),
                     Text("iteam name:${list?.source![index].name}"),
+                    Text("${list!.data![index].population}")
                  // Text("iteam name:${list?.entries![index].link}"),
 
                     ],
